@@ -18,11 +18,11 @@
   <!-- Nivo Lightbox -->
   <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css">
   <!-- Animate -->
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.css?ver=1.1.7">
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css?ver=1.1.8">
   <!-- Main Style -->
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css?ver=1.1.7">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css?ver=1.1.8">
   <!-- Responsive Style -->
-  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css?ver=1.1.7">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css?ver=1.1.8">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
@@ -880,9 +880,9 @@
   <script src="assets/js/jquery.counterup.min.js"></script>
   <script src="assets/js/jquery.nav.js"></script>
   <script src="assets/js/jquery.easing.min.js"></script>
-  <script src="assets/js/wow.js?ver=1.1.7"></script>
+  <script src="assets/js/wow.js?ver=1.1.8"></script>
   <script src="assets/js/nivo-lightbox.js"></script>
-  <script src="assets/js/main.js?ver=1.1.7"></script>
+  <script src="assets/js/main.js?ver=1.1.8"></script>
   <script src="assets/js/sweetalert.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
@@ -924,100 +924,100 @@
         }
         
       })
-      function deleteAllCookies() {
-        var cookies = document.cookie.split(";");
-        for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i];
-          var eqPos = cookie.indexOf("=");
-          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-          path = "/live-stream";
-          document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=' + path + ";";
-        }
-      }
+      // function deleteAllCookies() {
+      //   var cookies = document.cookie.split(";");
+      //   for (var i = 0; i < cookies.length; i++) {
+      //     var cookie = cookies[i];
+      //     var eqPos = cookie.indexOf("=");
+      //     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      //     path = "/live-stream";
+      //     document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=' + path + ";";
+      //   }
+      // }
 
-      function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-      }
+      // function readCookie(name) {
+      //   var nameEQ = name + "=";
+      //   var ca = document.cookie.split(';');
+      //   for (var i = 0; i < ca.length; i++) {
+      //     var c = ca[i];
+      //     while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      //     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      //   }
+      //   return null;
+      // }
 
-      function isNumericInputPhone(event) {
-        var key = event.keyCode;
-        return ((key >= 48 && key <= 57) || // Allow number line
-          (key >= 96 && key <= 105) // Allow number pad
-        );
-      };
+      // function isNumericInputPhone(event) {
+      //   var key = event.keyCode;
+      //   return ((key >= 48 && key <= 57) || // Allow number line
+      //     (key >= 96 && key <= 105) // Allow number pad
+      //   );
+      // };
 
-      function isModifierKey(event) {
-        var key = event.keyCode;
-        return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
-          (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
-          (key > 36 && key < 41) || // Allow left, up, right, down
-          (
-            // Allow Ctrl/Command + A,C,V,X,Z
-            (event.ctrlKey === true || event.metaKey === true) &&
-            (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
-          )
-      };
+      // function isModifierKey(event) {
+      //   var key = event.keyCode;
+      //   return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+      //     (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+      //     (key > 36 && key < 41) || // Allow left, up, right, down
+      //     (
+      //       // Allow Ctrl/Command + A,C,V,X,Z
+      //       (event.ctrlKey === true || event.metaKey === true) &&
+      //       (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+      //     )
+      // };
 
-      function enforceFormat(event) {
-        // Input must be of a valid number format or a modifier key, and not longer than ten digits
-        if (!isNumericInputPhone(event) && !isModifierKey(event)) {
-          event.preventDefault();
-        }
-      };
+      // function enforceFormat(event) {
+      //   // Input must be of a valid number format or a modifier key, and not longer than ten digits
+      //   if (!isNumericInputPhone(event) && !isModifierKey(event)) {
+      //     event.preventDefault();
+      //   }
+      // };
 
-      function formatToPhone(event) {
-        if (isModifierKey(event)) {
-          return;
-        }
+      // function formatToPhone(event) {
+      //   if (isModifierKey(event)) {
+      //     return;
+      //   }
 
-        // I am lazy and don't like to type things more than once
-        var target = event.target;
-        var input = event.target.value.replace(/\D/g, '').substring(0, 10); // First ten digits of input only
-        var zip = input.substring(0, 3);
-        var middle = input.substring(3, 6);
-        var last = input.substring(6, 10);
-        if (zip.charAt(0) === "0") {
-          target.value = ``;
-        } else if (input.length > 6) {
-          target.value = `(${zip}) ${middle} - ${last}`;
-        } else if (input.length > 3) {
-          target.value = `(${zip}) ${middle}`;
-        } else if (input.length > 0) {
-          target.value = `(${zip}`;
-        }
-      };
+      //   // I am lazy and don't like to type things more than once
+      //   var target = event.target;
+      //   var input = event.target.value.replace(/\D/g, '').substring(0, 10); // First ten digits of input only
+      //   var zip = input.substring(0, 3);
+      //   var middle = input.substring(3, 6);
+      //   var last = input.substring(6, 10);
+      //   if (zip.charAt(0) === "0") {
+      //     target.value = ``;
+      //   } else if (input.length > 6) {
+      //     target.value = `(${zip}) ${middle} - ${last}`;
+      //   } else if (input.length > 3) {
+      //     target.value = `(${zip}) ${middle}`;
+      //   } else if (input.length > 0) {
+      //     target.value = `(${zip}`;
+      //   }
+      // };
 
-      $(document).on("keydown", "#tel", function (e) {
-        enforceFormat(e);
-      });
+      // $(document).on("keydown", "#tel", function (e) {
+      //   enforceFormat(e);
+      // });
 
-      $(document).on("keyup", "#tel", function (e) {
-        formatToPhone(e);
-      });
+      // $(document).on("keyup", "#tel", function (e) {
+      //   formatToPhone(e);
+      // });
 
-      $(document).on("keydown", "#phoneNumber", function (e) {
-        enforceFormat(e);
-      });
+      // $(document).on("keydown", "#phoneNumber", function (e) {
+      //   enforceFormat(e);
+      // });
 
-      $(document).on("keyup", "#phoneNumber", function (e) {
-        formatToPhone(e);
-      });
+      // $(document).on("keyup", "#phoneNumber", function (e) {
+      //   formatToPhone(e);
+      // });
 
-      function MailKontrol(email) {
-        var kontrol = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-        return kontrol.test(email);
-      };
+      // function MailKontrol(email) {
+      //   var kontrol = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+      //   return kontrol.test(email);
+      // };
 
 
 
-      var loginCheck = localStorage.getItem("isLogin");
+      // var loginCheck = localStorage.getItem("isLogin");
 
       // if (loginCheck != "1") {
       //   setTimeout(() => {
@@ -1030,193 +1030,193 @@
       //   }, 1000);
       // }
 
-      $('#first-step-form').submit(function (e) {
+    //   $('#first-step-form').submit(function (e) {
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        var emailAddress = $('#emailAddress').val();
-        var phoneNumber = $('#phoneNumber').val();
+    //     var emailAddress = $('#emailAddress').val();
+    //     var phoneNumber = $('#phoneNumber').val();
 
-        if (MailKontrol(emailAddress) === false) {
-          swal("Uyarı", "Uygun bir e-mail adresi giriniz!", "warning");
-          return false;
-        }
-        else if (phoneNumber === null || phoneNumber === "" || phoneNumber.length < 16) {
-          swal("Uyarı", "Uygun bir telefon numarası giriniz!", "warning");
-          return false;
-        }
-        else {
+    //     if (MailKontrol(emailAddress) === false) {
+    //       swal("Uyarı", "Uygun bir e-mail adresi giriniz!", "warning");
+    //       return false;
+    //     }
+    //     else if (phoneNumber === null || phoneNumber === "" || phoneNumber.length < 16) {
+    //       swal("Uyarı", "Uygun bir telefon numarası giriniz!", "warning");
+    //       return false;
+    //     }
+    //     else {
 
-          // Call ajax for pass data to other place
-          $.ajax({
-            type: 'POST',
-            url: 'insert.php',
-            data: { emailAddress: emailAddress, phoneNumber: phoneNumber } // getting filed value in serialize form
-          })
-            .done(function (data) { // if getting done then call.
+    //       // Call ajax for pass data to other place
+    //       $.ajax({
+    //         type: 'POST',
+    //         url: 'insert.php',
+    //         data: { emailAddress: emailAddress, phoneNumber: phoneNumber } // getting filed value in serialize form
+    //       })
+    //         .done(function (data) { // if getting done then call.
 
-              if (data === "Bizden Haber Bekleyin :)") {
-                localStorage.setItem("userEmail", emailAddress);
-                localStorage.setItem("isLogin", 1);
-                $("#ex1").modal('hide');
-                $(".blocker").css("display", "none");
+    //           if (data === "Bizden Haber Bekleyin :)") {
+    //             localStorage.setItem("userEmail", emailAddress);
+    //             localStorage.setItem("isLogin", 1);
+    //             $("#ex1").modal('hide');
+    //             $(".blocker").css("display", "none");
 
-                $.ajax({
-                  type: 'POST',
-                  dataType: "json",
-                  async: false,
-                  url: 'getStreamInfo.php',
-                  data: { liveId: 1 }
-                })
-                  .done(function (data) {
-                    if (data.result != '') {
-                      $("#live-stream").html(data.result.liveLink);
-                      if (data.result.timerShow === '0') {
-                        $("#count").css("display", "none");
-                      }
-                    } else {
-                      console.log(data);
-                      return false;
-                    }
-                  })
-                  .fail(function (e) {
-                    console.log(e);
-                    return false;
-                  });
-
-
-              } else {
-                swal({
-                  title: data,
-                  icon: 'warning'
-                });
-              }
-            })
-            .fail(function () { // if fail then getting message
-              swal("Hata", "Başvuru başarısız! Lütfen tekrar deneyin.", "error");
-            });
-          return false;
-
-        }
-
-      });
-
-      if (loginCheck === "1") {
-
-        $.ajax({
-          type: 'POST',
-          dataType: "json",
-          async: false,
-          url: 'getStreamInfo.php',
-          data: { liveId: 1 }
-        })
-          .done(function (data) {
-            if (data.result != '') {
-              $("#live-stream").html(data.result.liveLink);
-              if (data.result.timerShow === '0') {
-                $("#count").css("display", "none");
-                $("#form-submit-question").removeAttr("disabled");
-              }
-            } else {
-              console.log(data);
-              return false;
-            }
-          })
-          .fail(function (e) {
-            console.log(e);
-            return false;
-          });
-
-      }
-
-      $('#contactForm').submit(function (e) {
-        e.preventDefault();
-
-        var emailAddress = $('#email').val();
-        var phoneNumber = $('#tel').val();
-
-        if (MailKontrol(emailAddress) === false) {
-          swal("Uyarı", "Uygun bir e-mail adresi giriniz!", "warning");
-          return false;
-        }
-        else if (phoneNumber === null || phoneNumber === "" || phoneNumber.length < 16) {
-          swal("Uyarı", "Uygun bir telefon numarası giriniz!", "warning");
-          return false;
-        }
-        else {
-
-          // Call ajax for pass data to other place
-          $.ajax({
-            type: 'POST',
-            url: 'insert.php',
-            data: { emailAddress: emailAddress, phoneNumber: phoneNumber } // getting filed value in serialize form
-          })
-            .done(function (data) { // if getting done then call.
-
-              if (data === "Bizden Haber Bekleyin :)") {
-                swal({
-                  title: 'Bizden Haber Bekleyin :)',
-                  icon: 'success'
-                }).then(function () {
-                  location.reload();
-                });
-              } else {
-                swal({
-                  title: data,
-                  icon: 'warning'
-                });
-              }
-            })
-            .fail(function () { // if fail then getting message
-              swal("Hata", "Başvuru başarısız! Lütfen tekrar deneyin.", "error");
-            });
-          return false;
-
-        }
-
-      });
-
-      $('#question-form').submit(function (event) {
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        $("#form-submit-question").attr("disabled", true);
-
-        var values = $(this).serialize();
-        values += "&streamId=gncytnk_questions_1";
-        values += "&emailAddress=" + localStorage.getItem("userEmail");
-
-        $.ajax({
-          type: 'POST',
-          url: 'insertQuestion.php',
-          data: values
-        })
-          .done(function (data) {
-            if ($.trim(data) === "Sorunuz İletildi") {
-              swal({
-                title: 'Sorunuz İletildi',
-                icon: 'success'
-              });
-              $('#question-form')[0].reset();
-              $("#form-submit-question").attr("disabled", false);
-            } else {
-              swal({
-                title: data,
-                icon: 'warning'
-              });
-              $("#form-submit-question").attr("disabled", false);
-            }
-          })
-          .fail(function () {
-            swal("Hata", "Sorunuz iletilemedi! Lütfen tekrar deneyin.", "error");
-            $("#form-submit-question").attr("disabled", false);
-          });
-        return false;
-      });
+    //             $.ajax({
+    //               type: 'POST',
+    //               dataType: "json",
+    //               async: false,
+    //               url: 'getStreamInfo.php',
+    //               data: { liveId: 1 }
+    //             })
+    //               .done(function (data) {
+    //                 if (data.result != '') {
+    //                   $("#live-stream").html(data.result.liveLink);
+    //                   if (data.result.timerShow === '0') {
+    //                     $("#count").css("display", "none");
+    //                   }
+    //                 } else {
+    //                   console.log(data);
+    //                   return false;
+    //                 }
+    //               })
+    //               .fail(function (e) {
+    //                 console.log(e);
+    //                 return false;
+    //               });
 
 
-    });
+    //           } else {
+    //             swal({
+    //               title: data,
+    //               icon: 'warning'
+    //             });
+    //           }
+    //         })
+    //         .fail(function () { // if fail then getting message
+    //           swal("Hata", "Başvuru başarısız! Lütfen tekrar deneyin.", "error");
+    //         });
+    //       return false;
+
+    //     }
+
+    //   });
+
+    //   if (loginCheck === "1") {
+
+    //     $.ajax({
+    //       type: 'POST',
+    //       dataType: "json",
+    //       async: false,
+    //       url: 'getStreamInfo.php',
+    //       data: { liveId: 1 }
+    //     })
+    //       .done(function (data) {
+    //         if (data.result != '') {
+    //           $("#live-stream").html(data.result.liveLink);
+    //           if (data.result.timerShow === '0') {
+    //             $("#count").css("display", "none");
+    //             $("#form-submit-question").removeAttr("disabled");
+    //           }
+    //         } else {
+    //           console.log(data);
+    //           return false;
+    //         }
+    //       })
+    //       .fail(function (e) {
+    //         console.log(e);
+    //         return false;
+    //       });
+
+    //   }
+
+    //   $('#contactForm').submit(function (e) {
+    //     e.preventDefault();
+
+    //     var emailAddress = $('#email').val();
+    //     var phoneNumber = $('#tel').val();
+
+    //     if (MailKontrol(emailAddress) === false) {
+    //       swal("Uyarı", "Uygun bir e-mail adresi giriniz!", "warning");
+    //       return false;
+    //     }
+    //     else if (phoneNumber === null || phoneNumber === "" || phoneNumber.length < 16) {
+    //       swal("Uyarı", "Uygun bir telefon numarası giriniz!", "warning");
+    //       return false;
+    //     }
+    //     else {
+
+    //       // Call ajax for pass data to other place
+    //       $.ajax({
+    //         type: 'POST',
+    //         url: 'insert.php',
+    //         data: { emailAddress: emailAddress, phoneNumber: phoneNumber } // getting filed value in serialize form
+    //       })
+    //         .done(function (data) { // if getting done then call.
+
+    //           if (data === "Bizden Haber Bekleyin :)") {
+    //             swal({
+    //               title: 'Bizden Haber Bekleyin :)',
+    //               icon: 'success'
+    //             }).then(function () {
+    //               location.reload();
+    //             });
+    //           } else {
+    //             swal({
+    //               title: data,
+    //               icon: 'warning'
+    //             });
+    //           }
+    //         })
+    //         .fail(function () { // if fail then getting message
+    //           swal("Hata", "Başvuru başarısız! Lütfen tekrar deneyin.", "error");
+    //         });
+    //       return false;
+
+    //     }
+
+    //   });
+
+    //   $('#question-form').submit(function (event) {
+
+    //     event.preventDefault();
+    //     event.stopPropagation();
+
+    //     $("#form-submit-question").attr("disabled", true);
+
+    //     var values = $(this).serialize();
+    //     values += "&streamId=gncytnk_questions_1";
+    //     values += "&emailAddress=" + localStorage.getItem("userEmail");
+
+    //     $.ajax({
+    //       type: 'POST',
+    //       url: 'insertQuestion.php',
+    //       data: values
+    //     })
+    //       .done(function (data) {
+    //         if ($.trim(data) === "Sorunuz İletildi") {
+    //           swal({
+    //             title: 'Sorunuz İletildi',
+    //             icon: 'success'
+    //           });
+    //           $('#question-form')[0].reset();
+    //           $("#form-submit-question").attr("disabled", false);
+    //         } else {
+    //           swal({
+    //             title: data,
+    //             icon: 'warning'
+    //           });
+    //           $("#form-submit-question").attr("disabled", false);
+    //         }
+    //       })
+    //       .fail(function () {
+    //         swal("Hata", "Sorunuz iletilemedi! Lütfen tekrar deneyin.", "error");
+    //         $("#form-submit-question").attr("disabled", false);
+    //       });
+    //     return false;
+    //   });
+
+
+     });
 
 
   </script>
